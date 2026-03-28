@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GTG Perfumes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════════════ -->
+  <header class="navbar" id="navbar">
+    <div class="logo">GTG</div>
+
+    <nav class="nav-links">
+      <a href="#hero">Home</a>
+      <a href="#product">Shop ▾</a>
+      <a href="#collection">Fragrances</a>
+      <a href="#footer">About Us</a>
+      <a href="#footer">Blog</a>
+      <a href="#footer">Contact</a>
+    </nav>
+
+    <div class="nav-right">
+      <div class="search-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <circle cx="11" cy="11" r="7" stroke="#032E15" stroke-width="2"/>
+          <line x1="16.5" y1="16.5" x2="21" y2="21" stroke="#032E15" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <a href="#product" class="shop-btn">Shop Now</a>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose">✕</button>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#product">Shop</a>
+      <a href="#collection">Fragrances</a>
+      <a href="#footer">About Us</a>
+      <a href="#footer">Blog</a>
+      <a href="#footer">Contact</a>
+      <a href="#product" class="shop-btn">Shop Now</a>
+    </nav>
+  </div>
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="badge">
+        <img src="assets/icons/medal.png" alt="award">
+        Awarded the best perfume in the world
+      </div>
+      <h1>Live your best life.</h1>
+      <div class="stats">
+        <div><h2>10x</h2><p>power</p></div>
+        <div><h2>9</h2><p>ingredients</p></div>
+        <div><h2>20K+</h2><p>happy customers</p></div>
+      </div>
+      <a href="#" class="cta-btn">Shop Now</a>
+    </div>
+    <div class="hero-image"></div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       PRODUCT SECTION
+  ═══════════════════════════════════════════ -->
+  <section class="product-section" id="product">
+    <div class="product-container">
+
+      <!-- LEFT: Gallery -->
+      <div class="product-gallery">
+        <div class="main-image-wrapper">
+          <button class="slider-btn prev-btn" id="prevBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M15 18l-6-6 6-6" stroke="#1a4731" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <img src="assets/images/perfume-purple.png" alt="GTG Perfume" class="main-slide" id="mainImage">
+          <button class="slider-btn next-btn" id="nextBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M9 18l6-6-6-6" stroke="#1a4731" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="slider-dots" id="sliderDots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+            <span class="dot" data-index="3"></span>
+          </div>
+        </div>
+
+        <!-- Thumbnails: 2 rows of 4 -->
+        <div class="thumbnails">
+          <div class="thumb-row">
+            <img src="assets/images/thumb-1.png" alt="" class="thumb active" data-index="0">
+            <img src="assets/images/thumb-2.png" alt="" class="thumb" data-index="1">
+            <img src="assets/images/thumb-3.png" alt="" class="thumb" data-index="2">
+            <img src="assets/images/thumb-4.png" alt="" class="thumb" data-index="3">
+          </div>
+          <div class="thumb-row">
+            <img src="assets/images/thumb-5.png" alt="" class="thumb" data-index="0">
+            <img src="assets/images/thumb-6.png" alt="" class="thumb" data-index="1">
+            <img src="assets/images/thumb-7.png" alt="" class="thumb" data-index="2">
+            <img src="assets/images/thumb-8.png" alt="" class="thumb" data-index="3">
+          </div>
+        </div>
+      </div><!-- /product-gallery -->
+
+      <!-- RIGHT: Product Info -->
+      <div class="product-info">
+        <h2 class="product-title">GTG Perfumes</h2>
+
+        <div class="product-rating">
+          <span class="stars">★★★★★</span>
+          <span class="rating-text">4.7 (999+ reviews)</span>
+        </div>
+
+        <p class="product-desc">Experience the timeless allure backed by modern artistry, captured in every bottle of our fragrance. Crafted for those who seek to elevate their essence with purpose and sophistication.</p>
+
+        <div class="most-popular-badge">Most Popular</div>
+
+        <div class="subscription-options">
+
+          <!-- ── SINGLE SUBSCRIPTION ── -->
+          <div class="sub-option selected" id="singleOption">
+            <label class="sub-label">
+              <input type="radio" name="subscription" value="single" checked>
+              <span class="sub-name">Single Subscription</span>
+              <span class="sub-price">
+                <span class="price-main">$99.99</span>
+                <span class="price-orig">$146</span>
+              </span>
+            </label>
+
+            <div class="sub-content" id="singleContent">
+              <!-- Choose Fragrance -->
+              <div class="fragrance-group">
+                <p class="group-label">Choose a Fragrance</p>
+                <div class="fragrance-images">
+                  <div class="frag-card active-frag" data-frag="original">
+                    <span class="best-seller-badge">BEST-SELLER</span>
+                    <div class="frag-header">
+                      <span class="frag-radio"></span>
+                      <span>Original</span>
+                    </div>
+                    <img src="assets/images/frag-white.png" alt="Original">
+                  </div>
+                  <div class="frag-card" data-frag="lily">
+                    <div class="frag-header">
+                      <span class="frag-radio"></span>
+                      <span>Lily</span>
+                    </div>
+                    <img src="assets/images/frag-purple.png" alt="Lily">
+                  </div>
+                  <div class="frag-card" data-frag="rose">
+                    <div class="frag-header">
+                      <span class="frag-radio"></span>
+                      <span>Rose</span>
+                    </div>
+                    <img src="assets/images/frag-orange.png" alt="Rose">
+                  </div>
+                </div>
+                <!-- Hidden radios for JS logic -->
+                <div style="display:none">
+                  <input type="radio" name="fragrance" value="original" checked>
+                  <input type="radio" name="fragrance" value="lily">
+                  <input type="radio" name="fragrance" value="rose">
+                </div>
+              </div>
+
+              <!-- What's Included: two side-by-side panels (matching Figma) -->
+              <div class="whats-included">
+                <p class="group-label">What's Included:</p>
+                <div class="included-two-panels">
+                  <div class="inc-panel-box">
+                    <div class="inc-card single">
+                      <div class="inc-panel-label">Every 30 Days</div>
+                      <img id="singleMonthlyImg" src="assets/images/frag-white.png" alt="Monthly bottle">
+                    </div>
+                  </div>
+                  <div class="inc-panel-box">
+                    <div class="inc-card onetime-card">
+                      <div class="inc-panel-label">One Time <strong>(Free)</strong></div>
+                      <img src="assets/images/included-one.png" alt="Free sampler - all 3 fragrances">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Benefits -->
+              <ul class="benefits-list">
+                <li>
+                  <span class="bene-icon outline">
+                    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" stroke="#008236" stroke-width="1.2"/><path d="M5 8.2l2 2 4-4" stroke="#008236" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                  1 Bottle Shipped Monthly
+                </li>
+                <li>
+                  <span class="bene-icon outline">
+                    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" stroke="#008236" stroke-width="1.2"/><path d="M5 8.2l2 2 4-4" stroke="#008236" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                  Free Sampler For Original, Lily And Rose Fragrances
+                </li>
+                <li>
+                  <span class="bene-icon filled">
+                    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" stroke="#008236" stroke-width="1.2"/><path d="M5 8.2l2 2 4-4" stroke="#008236" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                 
+                  </span>
+                  50% OFF Shipping
+                </li>
+                <li>
+                  <span class="bene-icon outline">
+                    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" stroke="#008236" stroke-width="1.2"/><path d="M5 8.2l2 2 4-4" stroke="#008236" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                  Pause Or Cancel Anytime After 3 Months Minimum
+                </li>
+                <li>
+                  <span class="bene-icon outline">
+                    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" stroke="#008236" stroke-width="1.2"/><path d="M5 8.2l2 2 4-4" stroke="#008236" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                  28 Day Money Back Guarantee*
+                </li>
+              </ul>
+            </div><!-- /singleContent -->
+          </div><!-- /single sub-option -->
+
+          <!-- ── DOUBLE SUBSCRIPTION ── -->
+          <div class="sub-option" id="doubleOption">
+            <label class="sub-label">
+              <input type="radio" name="subscription" value="double">
+              <span class="sub-name">Double Subscription</span>
+              <span class="sub-price">
+                <span class="price-main">$169.99</span>
+                <span class="price-orig">$146</span>
+              </span>
+            </label>
+
+            <div class="sub-content hidden" id="doubleContent">
+
+              <!-- Fragrance 1 -->
+              <div class="fragrance-group">
+                <p class="group-label">Choose Fragrance 1</p>
+                <div class="fragrance-images">
+                  <div class="frag-card active-frag" data-frag2a="original">
+                    <span class="best-seller-badge">BEST-SELLER</span>
+                    <div class="frag-header">
+                      <span class="frag-radio"></span>
+                      <span>Original</span>
+                    </div>
+                    <img src="assets/images/frag-white.png" alt="Original">
+                  </div>
+                  <div class="frag-card" data-frag2a="lily">
+                    <div class="frag-header">
+                      <span class="frag-radio"></span>
+                      <span>Lily</span>
+                    </div>
+                    <img src="assets/images/frag-purple.png" alt="Lily">
+                  </div>
+                  <div class="frag-card" data-frag2a="rose">
+                    <div class="frag-header">
+                      <span class="frag-radio"></span>
+                      <span>Rose</span>
+                    </div>
+                    <img src="assets/images/frag-orange.png" alt="Rose">
+                  </div>
+                </div>
+                <div style="display:none">
+                  <input type="radio" name="fragrance2a" value="original" checked>
+                  <input type="radio" name="fragrance2a" value="lily">
+                  <input type="radio" name="fragrance2a" value="rose">
+                </div>
+              </div>
+
+              <!-- Fragrance 2 -->
+              <div class="fragrance-group">
+                <p class="group-label">Choose Fragrance 2</p>
+                <div class="fragrance-images">
+                  <div class="frag-card active-frag" data-frag2b="original">
+                    <span class="best-seller-badge">BEST-SELLER</span>
+                    <div class="frag-header">
+                      <span class="frag-radio"></span>
+                      <span>Original</span>
+                    </div>
+                    <img src="assets/images/frag-white.png" alt="Original">
+                  </div>
+                  <div class="frag-card" data-frag2b="lily">
+                    <div class="frag-header">
+                      <span class="frag-radio"></span>
+                      <span>Lily</span>
+                    </div>
+                    <img src="assets/images/frag-purple.png" alt="Lily">
+                  </div>
+                  <div class="frag-card" data-frag2b="rose">
+                    <div class="frag-header">
+                      <span class="frag-radio"></span>
+                      <span>Rose</span>
+                    </div>
+                    <img src="assets/images/frag-orange.png" alt="Rose">
+                  </div>
+                </div>
+                <div style="display:none">
+                  <input type="radio" name="fragrance2b" value="original" checked>
+                  <input type="radio" name="fragrance2b" value="lily">
+                  <input type="radio" name="fragrance2b" value="rose">
+                </div>
+              </div>
+
+              <!-- What's Included (Double) - two side-by-side panels -->
+              <div class="whats-included">
+                <p class="group-label">What's Included:</p>
+                <div class="included-two-panels">
+                  <div class="inc-panel-box">
+                    <div class="inc-card single">
+                      <div class="inc-panel-label">Every 30 Days</div>
+                      <img id="doubleMonthlyImg" src="assets/images/frag-white.png" alt="Monthly bottle">
+                    </div>
+                  </div>
+                  <div class="inc-panel-box">
+                    <div class="inc-card onetime-card">
+                      <div class="inc-panel-label">One Time <strong>(Free)</strong></div>
+                      <img src="assets/images/included-one.png" alt="Free sampler - all 3 fragrances">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Benefits -->
+              <ul class="benefits-list">
+                <li>
+                  <svg class="benefit-icon" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7.5" stroke="#008236"/><path d="M4.5 8l2.5 2.5 4-4" stroke="#008236" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  1 Bottle Shipped Monthly
+                </li>
+                <li>
+                  <svg class="benefit-icon" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7.5" stroke="#008236"/><path d="M4.5 8l2.5 2.5 4-4" stroke="#008236" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Free Sampler For Original, Lily And Rose Fragrances
+                </li>
+                <li>
+                  <svg class="benefit-icon green-fill" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7.5" stroke="#008236"/><path d="M4.5 8l2.5 2.5 4-4" stroke="#008236" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  50% OFF Shipping
+                </li>
+                <li>
+                  <svg class="benefit-icon" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7.5" stroke="#008236"/><path d="M4.5 8l2.5 2.5 4-4" stroke="#008236" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Pause Or Cancel Anytime After 3 Months Minimum
+                </li>
+                <li>
+                  <svg class="benefit-icon" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7.5" stroke="#008236"/><path d="M4.5 8l2.5 2.5 4-4" stroke="#008236" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  28 Day Money Back Guarantee*
+                </li>
+              </ul>
+            </div>
+          </div><!-- /double -->
+
+        </div><!-- /subscription-options -->
+
+        <a href="#" class="add-to-cart-btn" id="addToCartBtn">Add to Cart</a>
+      </div><!-- /product-info -->
+
+    </div><!-- /product-container -->
+  </section>
+  <!-- ═══════════════════════════════════════════
+       OUR COLLECTION
+  ═══════════════════════════════════════════ -->
+  <section class="collection-section" id="collection">
+    <div class="collection-container">
+      <div class="collection-left">
+        <h2 class="collection-title">Our Collection</h2>
+        <div class="accordion">
+          <div class="accordion-item open">
+            <button class="accordion-header">
+              <span>Signature Scents</span>
+              <span class="acc-icon">−</span>
+            </button>
+            <div class="accordion-body">
+              <p>Discover our curated line of signature perfumes, designed to become your daily companion.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span>Signature Scents</span>
+              <span class="acc-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>Experience fragrances that blend timeless ingredients with modern artistry for an unforgettable scent.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span>Signature Scents</span>
+              <span class="acc-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>Each bottle is crafted with purpose and sophistication, elevating your everyday essence.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span>Signature Scents</span>
+              <span class="acc-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>From floral to woody, explore our full range of curated scents for every mood.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="collection-right">
+        <img src="assets/images/collection-model.png" alt="Our Collection" class="collection-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       STATS / PERCENTAGE SECTION
+  ═══════════════════════════════════════════ -->
+  <section class="stats-section" id="statsSection">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <h3 class="stat-number" data-target="84">0%</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+      </div>
+      <div class="stat-item">
+        <h3 class="stat-number" data-target="78">0%</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+      </div>
+      <div class="stat-item">
+        <h3 class="stat-number" data-target="89">0%</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+      </div>
+      <div class="stat-item">
+        <h3 class="stat-number" data-target="90">0%</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       COMPARISON TABLE
+  ═══════════════════════════════════════════ -->
+  <section class="comparison-section">
+    <div class="comparison-container">
+      <p class="section-eyebrow">— — —</p>
+      <h2 class="comparison-title">Why GTG is the #1 Choice</h2>
+
+      <div class="table-wrapper">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th class="qualities-col">Qualities</th>
+              <th class="gtg-col">
+                <div class="brand-cell gtg-brand">
+                  <img src="assets/images/gtg-bottle.png" alt="GTG">
+                  <span>GTG</span>
+                </div>
+              </th>
+              <th>
+                <div class="brand-cell">
+                  <img src="assets/images/brand-2.png" alt="Arose">
+                  <span class="brand-name-sm">Arose</span>
+                </div>
+              </th>
+              <th>
+                <div class="brand-cell">
+                  <img src="assets/images/brand-3.png" alt="Bella">
+                  <span class="brand-name-sm">Bella</span>
+                </div>
+              </th>
+              <th>
+                <div class="brand-cell">
+                  <img src="assets/images/brand-4.png" alt="Daisies">
+                  <span class="brand-name-sm">Daisies</span>
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="qualities-col">Potency Concentration</td>
+              <td class="gtg-col val-gtg">10x</td>
+              <td>1x</td>
+              <td>1x</td>
+              <td>10x</td>
+            </tr>
+            <tr>
+              <td class="qualities-col">Longevity</td>
+              <td class="gtg-col"><span class="tbl-icon tbl-green"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#032E15"/><path d="M5.5 10.5l3 3 6-6" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td>
+              <td><span class="tbl-icon tbl-x"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#999" stroke-width="1.3"/><path d="M7 7l6 6M13 7l-6 6" stroke="#999" stroke-width="1.5" stroke-linecap="round"/></svg></span></td>
+              <td><span class="tbl-icon tbl-x"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#999" stroke-width="1.3"/><path d="M7 7l6 6M13 7l-6 6" stroke="#999" stroke-width="1.5" stroke-linecap="round"/></svg></span></td>
+              <td><span class="tbl-icon tbl-x"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#999" stroke-width="1.3"/><path d="M7 7l6 6M13 7l-6 6" stroke="#999" stroke-width="1.5" stroke-linecap="round"/></svg></span></td>
+            </tr>
+            <tr>
+              <td class="qualities-col">Sillage</td>
+              <td class="gtg-col"><span class="tbl-icon tbl-green"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#032E15"/><path d="M5.5 10.5l3 3 6-6" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td>
+              <td><span class="tbl-icon tbl-x"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#999" stroke-width="1.3"/><path d="M7 7l6 6M13 7l-6 6" stroke="#999" stroke-width="1.5" stroke-linecap="round"/></svg></span></td>
+              <td><span class="tbl-icon tbl-x"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#999" stroke-width="1.3"/><path d="M7 7l6 6M13 7l-6 6" stroke="#999" stroke-width="1.5" stroke-linecap="round"/></svg></span></td>
+              <td><span class="tbl-icon tbl-x"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#999" stroke-width="1.3"/><path d="M7 7l6 6M13 7l-6 6" stroke="#999" stroke-width="1.5" stroke-linecap="round"/></svg></span></td>
+            </tr>
+            <tr>
+              <td class="qualities-col">Bottle Design Score</td>
+              <td class="gtg-col val-gtg">9</td>
+              <td>5</td>
+              <td>6</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td class="qualities-col">Blend and Harmony</td>
+              <td class="gtg-col"><span class="tbl-icon tbl-green"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#032E15"/><path d="M5.5 10.5l3 3 6-6" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td>
+              <td><span class="tbl-icon tbl-x"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#999" stroke-width="1.3"/><path d="M7 7l6 6M13 7l-6 6" stroke="#999" stroke-width="1.5" stroke-linecap="round"/></svg></span></td>
+              <td><span class="tbl-icon tbl-x"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#999" stroke-width="1.3"/><path d="M7 7l6 6M13 7l-6 6" stroke="#999" stroke-width="1.5" stroke-linecap="round"/></svg></span></td>
+              <td><span class="tbl-icon tbl-x"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#999" stroke-width="1.3"/><path d="M7 7l6 6M13 7l-6 6" stroke="#999" stroke-width="1.5" stroke-linecap="round"/></svg></span></td>
+            </tr>
+            <tr>
+              <td class="qualities-col">Skin Compatibility</td>
+              <td class="gtg-col"><span class="tbl-icon tbl-green"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#032E15"/><path d="M5.5 10.5l3 3 6-6" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td>
+              <td><span class="tbl-icon tbl-x"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#999" stroke-width="1.3"/><path d="M7 7l6 6M13 7l-6 6" stroke="#999" stroke-width="1.5" stroke-linecap="round"/></svg></span></td>
+              <td><span class="tbl-icon tbl-x"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#999" stroke-width="1.3"/><path d="M7 7l6 6M13 7l-6 6" stroke="#999" stroke-width="1.5" stroke-linecap="round"/></svg></span></td>
+              <td><span class="tbl-icon tbl-x"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#999" stroke-width="1.3"/><path d="M7 7l6 6M13 7l-6 6" stroke="#999" stroke-width="1.5" stroke-linecap="round"/></svg></span></td>
+            </tr>
+            <tr>
+              <td class="qualities-col">Scent Profile</td>
+              <td class="gtg-col"><span class="tbl-icon tbl-green"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#032E15"/><path d="M5.5 10.5l3 3 6-6" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td>
+              <td><span class="tbl-icon tbl-outline-check"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#bbb" stroke-width="1.3"/><path d="M6.5 10.5l2.5 2.5 4.5-4.5" stroke="#bbb" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td>
+              <td><span class="tbl-icon tbl-x"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#999" stroke-width="1.3"/><path d="M7 7l6 6M13 7l-6 6" stroke="#999" stroke-width="1.5" stroke-linecap="round"/></svg></span></td>
+              <td><span class="tbl-icon tbl-x"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#999" stroke-width="1.3"/><path d="M7 7l6 6M13 7l-6 6" stroke="#999" stroke-width="1.5" stroke-linecap="round"/></svg></span></td>
+            </tr>
+            <tr>
+              <td class="qualities-col">Price vs. Quality</td>
+              <td class="gtg-col"><span class="tbl-icon tbl-green"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#032E15"/><path d="M5.5 10.5l3 3 6-6" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td>
+              <td><span class="tbl-icon tbl-outline-check"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#bbb" stroke-width="1.3"/><path d="M6.5 10.5l2.5 2.5 4.5-4.5" stroke="#bbb" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td>
+              <td><span class="tbl-icon tbl-x"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#999" stroke-width="1.3"/><path d="M7 7l6 6M13 7l-6 6" stroke="#999" stroke-width="1.5" stroke-linecap="round"/></svg></span></td>
+              <td><span class="tbl-icon tbl-outline-check"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#bbb" stroke-width="1.3"/><path d="M6.5 10.5l2.5 2.5 4.5-4.5" stroke="#bbb" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <a href="#" class="risk-free-btn">Try It Risk-Free</a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="footer" id="footer">
+    <div class="footer-container">
+      <div class="footer-logo">GTG</div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <a href="#">Home</a>
+          <a href="#">Shop</a>
+          <a href="#">Fragrances</a>
+        </div>
+        <div class="footer-col">
+          <a href="#">About Us</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer-col footer-social">
+          <a href="#" class="social-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+            </svg>
+            Facebook
+          </a>
+          <a href="#" class="social-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/>
+            </svg>
+            Instagram
+          </a>
+          <a href="#" class="social-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+            X
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-newsletter">
+        <p>Join our newsletter to stay up to date on features and releases.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Enter your email">
+          <button>Subscribe</button>
+        </div>
+        <p class="footer-legal">
+          By subscribing you agree to our <a href="#">Privacy Policy</a> and provide consent to receive updates from our company.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
